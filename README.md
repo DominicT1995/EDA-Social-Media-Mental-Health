@@ -72,8 +72,8 @@ percent_increase
 
 * Our third question was: Is there a discernible correlation between the age groups using social media and their mental health status? To investigate this question, we analyzed data on age groups, social media usage patterns, and mental health scores.
 
-- We were able to see significant correlation between social media use and mental health from the different ANOVA tests performed and the various boxplots analyzed. The following line graph does indicate an upward trend on mental health score as the avg hours per day increases.
 ![Average Mental Health Score vs. Social Media Use per Day](https://github.com/DominicT1995/Project_1/blob/main/Data_output/avg_mhs_vs_hours_used_by_age_multiline_graph.png)
+- We were able to see significant correlation between social media use and mental health from the different ANOVA tests performed and the various boxplots analyzed. The following line graph does indicate an upward trend on mental health score as the avg hours per day increases.
 
 ## Conclusion
 * Overall conclusion of our project analysis:
