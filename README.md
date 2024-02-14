@@ -4,29 +4,29 @@ For this first project, we were tasked with finding and analyzing a dataset of o
 ## Project Proposal
 
 #### Project Title: 
-    Social Media's Impact on Mental Health Across Ages
+Social Media's Impact on Mental Health Across Ages
 #### Team Members: 
-    Dominic Thomas, Jeff Neal, Karina Gonzalez, Angelie Wanner
+Dominic Thomas, Jeff Neal, Karina Gonzalez, Angelie Wanner
 #### Project Description: 
-    While social media offers numerous avenues for connectivity in society, it also presents distinct challenges for various age groups. Adolescents navigating identity formation, adults managing societal pressures, and seniors grappling with digital connectivity all encounter unique mental health challenges. Through data analyses, we aim to investigate the correlation between social media usage and the propensity to seek mental health support. Our objective is to unveil patterns, trends, and potential solutions to promote a healthier digital landscape for individuals of all ages.
+While social media offers numerous avenues for connectivity in society, it also presents distinct challenges for various age groups. Adolescents navigating identity formation, adults managing societal pressures, and seniors grappling with digital connectivity all encounter unique mental health challenges. Through data analyses, we aim to investigate the correlation between social media usage and the propensity to seek mental health support. Our objective is to unveil patterns, trends, and potential solutions to promote a healthier digital landscape for individuals of all ages.
 #### Research Questions to Answer:
-    1. Does social media have a detrimental impact on mental health?
-    2. Which social media platform is considered the most chaotic?
-    3. Is there a discernible correlation between the age groups using social media and their mental health status?
+1. Does social media have a detrimental impact on mental health?
+2. Which social media platform is considered the most chaotic?
+3. Is there a discernible correlation between the age groups using social media and their mental health status?
 #### Datasets to Be Used:
-    * Surveys (i.e. preferred platform? time spent on social media? Etc.)
+* Surveys (i.e. preferred platform? time spent on social media? Etc.)
 #### Rough Breakdown of Tasks: 
-    * Clean up of datasets; merge dataset if possible.
-    * Create graphs for following:
-        - Social media usage between age groups
-        - Mental health by age groups
-	    - Social media platforms used the most by time spent and age group (scatter plot)
-    	- Boxplots to identify any outliers
-	* Correlation of social media usage and mental health diagnosis
+* Clean up of datasets; merge dataset if possible.
+* Create graphs for following:
+    - Social media usage between age groups
+    - Mental health by age groups
+	- Social media platforms used the most by time spent and age group (scatter plot)
+    - Boxplots to identify any outliers
+* Correlation of social media usage and mental health diagnosis
 #### Hypothesis: 
-    If individuals spend a minimum of 4 hours on social media daily, a 30% increase in self-reported symptoms of anxiety and depression will be observed.
+If individuals spend a minimum of 4 hours on social media daily, a 30% increase in self-reported symptoms of anxiety and depression will be observed.
 #### Null Hypothesis: 
-    Spending at least 4 hours on social media does not have a high effect on individuals and their mental health.
+Spending at least 4 hours on social media does not have a high effect on individuals and their mental health.
 
 ## Process
 Our group leveraged the activities we've learned so far throughout the boot camp. From importing csv file, data clean up, to visualization using bar charts and boxplots.
@@ -42,7 +42,7 @@ Our first task was to clean up the data. Python code utilized to read in smmh.cs
 * Our first question we wanted to answer was: Does social media have a detrimental impact on mental health? To answer this question, we analyzed the relationship between social media usage patterns (hours spent per day) and mental health scores.
 
 ![Daily Social Media Use vs. Mental Health Score](https://github.com/DominicT1995/Project_1/blob/main/Data_output/hours_used_vs_mhs_boxplot.png)
-The boxplot shows few outliers in the 0-1, 1-2, 3-4, and 5+ hourly ranges. The boxplot also displays an upward trend in median and average mental health scores as time spent on social media increases. Python code performs an ANOVA test on hourly ranges of daily social media use by total mental health scores, resulting in a p-value of 8.11e-26 which shows significant difference mental health scores between hourly usage across the data set.
+    - The boxplot shows few outliers in the 0-1, 1-2, 3-4, and 5+ hourly ranges. The boxplot also displays an upward trend in median and average mental health scores as time spent on social media increases. Python code performs an ANOVA test on hourly ranges of daily social media use by total mental health scores, resulting in a p-value of 8.11e-26 which shows significant difference mental health scores between hourly usage across the data set.
 
 ```
 # Split dataframe to show only users with 0-4 hours of social media use per day
@@ -63,16 +63,16 @@ avg_higher = high_users_df["Total score"].mean()
 percent_increase = round((avg_higher - avg_lower) / avg_lower * 100, 2)
 percent_increase
 ```
-The python code then calculates the exact percent increase between average mental health score of users in the 0-4 hour daily social media usage range compared to those using social media for 4+ hours daily with the resulting percent increase noted at 17.23%
+    - The python code then calculates the exact percent increase between average mental health score of users in the 0-4 hour daily social media usage range compared to those using social media for 4+ hours daily with the resulting percent increase noted at 17.23%
 
 * Our second question we wanted to look at was: Which social media platform is considered the most chaotic? For this we looked at the different social media platforms used by participants and associated mental health scores to determine which exhibited the highest level of chaos or negativity.
 
 ![Social Media Type vs. Mental Health Score](https://github.com/DominicT1995/Project_1/blob/main/Data_output/platforms_vs_mhscore_boxplot.png)
-Each social media platform contains different forms of content for the viewer to engage in. Depending on the content, it could result in different mental scores and help determine which platform is considered the more “chaotic”. As seen on the boxplot, there are outliers in the lower end of the mental health scores for majority of the social media platforms used; however, TikTok did have an outlier score of 60 (highest total mental health score) which we determined indicated that it is the more "chaotic" of all the social media platforms used by participants.
+    - Each social media platform contains different forms of content for the viewer to engage in. Depending on the content, it could result in different mental scores and help determine which platform is considered the more “chaotic”. As seen on the boxplot, there are outliers in the lower end of the mental health scores for majority of the social media platforms used; however, TikTok did have an outlier score of 60 (highest total mental health score) which we determined indicated that it is the more "chaotic" of all the social media platforms used by participants.
 
 * Our third question was: Is there a discernible correlation between the age groups using social media and their mental health status? To investigate this question, we analyzed data on age groups, social media usage patterns, and mental health scores.
 
-We were able to see significant correlation between social media use and mental health from the different ANOVA tests performed and the various boxplots analyzed. The following line graph does indicate an upward trend on mental health score as the avg hours per day increases.
+    - We were able to see significant correlation between social media use and mental health from the different ANOVA tests performed and the various boxplots analyzed. The following line graph does indicate an upward trend on mental health score as the avg hours per day increases.
 ![Average Mental Health Score vs. Social Media Use per Day](https://github.com/DominicT1995/Project_1/blob/main/Data_output/avg_mhs_vs_hours_used_by_age_multiline_graph.png)
 
 ## Conclusion
